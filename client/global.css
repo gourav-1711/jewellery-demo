@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import "tailwindcss";
+@layer base {
+  /**
+   * Tailwind CSS theme with premium OKLCH colors for jewelry ecommerce
+   * Using OKLCH format for better color accuracy and contrast
+   */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 0.15 0.08 0.12;
+    --primary-foreground: 0.98 0.00 0.00;
+
+    --secondary: 0.96 0.01 0.05;
+    --secondary-foreground: 0.15 0.08 0.12;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 0.88 0.04 0.09;
+    --accent-foreground: 0.15 0.08 0.12;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+
+    /* Premium Gold Color Palette */
+    --gold-50: 0.98 0.02 0.11;
+    --gold-100: 0.94 0.04 0.12;
+    --gold-200: 0.88 0.08 0.14;
+    --gold-300: 0.82 0.12 0.16;
+    --gold-400: 0.76 0.16 0.18;
+    --gold-500: 0.70 0.20 0.20;
+    --gold-600: 0.64 0.24 0.22;
+    --gold-700: 0.58 0.28 0.24;
+    --gold-800: 0.52 0.32 0.26;
+    --gold-900: 0.46 0.36 0.28;
+
+    /* Premium Diamond/Silver Color Palette */
+    --diamond-50: 0.98 0.00 0.00;
+    --diamond-100: 0.95 0.01 0.02;
+    --diamond-200: 0.90 0.02 0.04;
+    --diamond-300: 0.84 0.03 0.06;
+    --diamond-400: 0.78 0.04 0.08;
+    --diamond-500: 0.72 0.05 0.10;
+    --diamond-600: 0.66 0.06 0.12;
+    --diamond-700: 0.60 0.07 0.14;
+    --diamond-800: 0.54 0.08 0.16;
+    --diamond-900: 0.48 0.09 0.18;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 0.82 0.12 0.16;
+    --primary-foreground: 0.15 0.08 0.12;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 0.64 0.24 0.22;
+    --accent-foreground: 0.98 0.00 0.00;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+
+    /* Dark mode gold colors */
+    --gold-50: 0.46 0.36 0.28;
+    --gold-100: 0.52 0.32 0.26;
+    --gold-200: 0.58 0.28 0.24;
+    --gold-300: 0.64 0.24 0.22;
+    --gold-400: 0.70 0.20 0.20;
+    --gold-500: 0.76 0.16 0.18;
+    --gold-600: 0.82 0.12 0.16;
+    --gold-700: 0.88 0.08 0.14;
+    --gold-800: 0.94 0.04 0.12;
+    --gold-900: 0.98 0.02 0.11;
+
+    /* Dark mode diamond colors */
+    --diamond-50: 0.48 0.09 0.18;
+    --diamond-100: 0.54 0.08 0.16;
+    --diamond-200: 0.60 0.07 0.14;
+    --diamond-300: 0.66 0.06 0.12;
+    --diamond-400: 0.72 0.05 0.10;
+    --diamond-500: 0.78 0.04 0.08;
+    --diamond-600: 0.84 0.03 0.06;
+    --diamond-700: 0.90 0.02 0.04;
+    --diamond-800: 0.95 0.01 0.02;
+    --diamond-900: 0.98 0.00 0.00;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .jewelry-gradient {
+    background: linear-gradient(135deg, oklch(var(--gold-300)), oklch(var(--gold-500)), oklch(var(--diamond-300)));
+  }
+  
+  .shimmer-effect {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .shimmer-effect::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    animation: shimmer 2s infinite;
+  }
+
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+    opacity: 0;
+  }
+
+  .glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Enhanced button styles */
+  .btn-premium {
+    @apply bg-gradient-to-r from-primary to-accent text-white font-semibold px-8 py-4 rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1;
+  }
+
+  .btn-outline-premium {
+    @apply border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold px-8 py-4 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl;
+  }
+
+  /* Interactive hover effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-2xl hover:shadow-primary/25;
+  }
+
+  /* Premium card styling */
+  .card-premium {
+    @apply bg-white/80 backdrop-blur-sm border border-gold-200/50 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2;
+  }
+
+  /* Gradient text effects */
+  .text-gradient-gold {
+    @apply bg-gradient-to-r from-gold-400 via-gold-500 to-gold-600 bg-clip-text text-transparent;
+  }
+
+  .text-gradient-primary {
+    @apply bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent;
+  }
+
+  /* Safe area for iOS */
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .h-safe-bottom {
+    height: env(safe-area-inset-bottom);
+  }
+
+  /* Scroll animations */
+  @keyframes slideInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-in-up {
+    animation: slideInUp 0.6s ease-out forwards;
+  }
+
+  /* Loading shimmer effect */
+  .loading-shimmer {
+    background: linear-gradient(90deg, #f3f4f6 25%, #e5e7eb 50%, #f3f4f6 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+  }
+
+  /* Better focus styles */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50 focus:ring-offset-2 transition-all duration-200;
+  }
+}
