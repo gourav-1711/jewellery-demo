@@ -1,8 +1,10 @@
 {
-    "build": {
-      "env": {
-        "NPM_CONFIG_FORCE": "true"
-      }
-    },
-    "installCommand": "npm install --force"
+  "buildCommand": "npm run build:client",
+  "outputDirectory": "dist/spa",
+  "installCommand": "npm install --force",
+  "build": {
+    "env": {
+      "NPM_CONFIG_FORCE": "true"
+    }
   }
+}
